@@ -1,0 +1,18 @@
+ALB vs NLB
+ALB
+  Layer 7 Application layer
+  HTTP,HTTPS
+  Flexible
+  Rule, Host, Path Based routing
+  Takes minutes to scale up
+  No Static IP, Client needs to do DNS resolution
+NLB
+  Layer 4 Transport Layer
+  TLS, TCP, UDP
+  Static IP
+  Better Latency Why??
+  Takes sudden spike in traffic easily
+  Comes with static IP, in case of Firewall setup, or client does not do DNS at all
+CLB
+  Layer 4/7
+  Legacy, Avoid
