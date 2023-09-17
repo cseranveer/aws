@@ -1,0 +1,62 @@
+Terraform
+  Plugins
+    Provider
+    Resource
+    Output
+      prints in console
+    variable
+      reference with var.varname
+      if the value isnt defined t apply will take it in run time prompt
+      terraform.tfvars file
+        terraform looks for above file for variables
+        to look for custom file
+          t apply -var-file example.tfvars
+      type constraint can be applied too
+      same way you can create a list with comma seperated and to call it use a[0]
+      can create objects with in the variables and to call it use a[0].name
+  Authentication
+     add access key/ secret key with-in aws provider in main.tf file
+  terraform init
+    creates .terraform/plugins folder
+    lock.json
+    terraform.tfstate
+      has the current state in json format
+    downloads plugins
+  terraform plan
+  terraform apply
+    when run twice does not create already created resources
+    matches the tf file state to infra state
+    terraform apply --target <resource>
+      only applies mentioned resource
+    t apply -var "varname=var value"
+  terraform destroy
+    --auto-approve
+    terraform destroy --target <resource>
+      destroys only one resource
+    - Code order does not matter in terraform, terraform is intelligent enough to follow order except for few cases
+  terraform state list
+    lists the deployed resources
+  terraform state show <element of list from above command's o/p>
+    describes the resources that are deployed
+  terraform output
+    only prints the outputs 
+  terraform refresh
+    detects any drift
+  Installation
+    Download software zip
+    move terraform executable to /usr/local/bin
+  Project
+    Create vpc
+    Create Internet Gateway
+    Create Custom Route Table 
+    Create a Subnet
+    Associate subnet with Route Table
+    Create Security Group to allow port 22,80,443
+    Create a network interface with an up in the subnet
+      Create aws EIP 
+      Needs an internet gateway prior to execution -  order of resource matters in this exceptional case
+    Assign an elastic IP in the network interface created
+    Create ubuntu server and install/enable apache2
+      To install/enable use user_data 
+    Pre-req
+      Create Key pair pem file
