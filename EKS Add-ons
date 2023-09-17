@@ -1,0 +1,9 @@
+VPC CNI - Virtual private cloud container network interface
+  provides networking capabilities to eks pods and nodes
+  Runs on each eks node
+  Creates ENI and attaches to nodes
+  Each node has one or more ENI attached to it and each ENI has fixed no of IPs 
+  vpc cni runs as a ds in cluster to allocate IP addresses from the VPC/Subnet to the nodes/pods/containers
+  Available IPs per eni per instance https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt // 
+  To create VPC CNI for cluster - Create IAM role(AmazonEKSVPCCNIRole) and attach policy(AmazonEKS_CNI_Policy)
+  Good read: https://docs.aws.amazon.com/eks/latest/userguide/cni-increase-ip-addresses.html
