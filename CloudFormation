@@ -1,0 +1,13 @@
+CloudFormation
+  Declarative IAC
+  Stack
+  Events
+    Tell you whats happening at backend in aws while stack is being created\
+  ChangeSet
+  Must be uploaded to S3 bucket
+  Cant update a stack but reupload
+  YAML
+    K,V pair
+    Nested Objects
+    Arrays (-)
+    Multiline Strings (|)
