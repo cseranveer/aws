@@ -11,3 +11,18 @@ CloudFormation
     Nested Objects
     Arrays (-)
     Multiline Strings (|)
+  S3 buckets are free to create and you can only delete empty buckets
+
+    properties: {}
+Update Behaviour
+  Updat with
+    No Interruption
+      for eg: update tags in a resource, physical ID remains same
+    Some Interruption
+      for eg: update instance type from t2.micro to t2.large, restart required.
+    Replacement
+      for eg: change RDS DB instance  AZ
+  Nested Stacks
+Resources:
+  MyS3Bucket: (Logical ID)
+    Type: AWS::S3::Bucket
