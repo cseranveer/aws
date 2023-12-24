@@ -1,0 +1,4 @@
+Cross Account S3 Bucket access using Assume Role Method
+Primary Account
+  S3 bucket account-a-s3-bucket
+  IAM Policycross-account-s3-bucket-rw-access-policy
